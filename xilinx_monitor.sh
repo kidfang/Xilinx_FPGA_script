@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#num=8
-
 num=$(xbutil list | grep xilinx | wc -l)
 
 for (( i=0; i<$num; i=i+1 ));
@@ -15,5 +13,3 @@ do
 
 	echo "$xli_pbf | $xli_sn | $xli_tmp degrees C | "$xli_pw"W / $xli_pw_max"
 done
-
-#echo $(cat temp.txt)
