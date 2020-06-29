@@ -1,0 +1,13 @@
+{
+    "device": "xilinx_u280_xdma_201920_3",
+    "xclbin": "/home/source/multi_xbtest/xbtest_stress.xclbin",
+    "xbtest_pfm_def": "/home/source/multi_xbtest/xbtest_pfm_def_u280.json",
+    "testcases": [
+        {
+        "type": "dma",
+        "parameters": {
+            "test_sequence":[[10,"DDR","all",256]]
+            }
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "device": "xilinx_u280_xdma_201920_3",
+    "xclbin": "/home/source/multi_xbtest/xbtest_stress.xclbin",
+    "xbtest_pfm_def": "/home/source/multi_xbtest/xbtest_pfm_def_u280.json",
+    "testcases": [
+        {
+        "type": "memory_hbm",
+        "parameters": {
+            "test_sequence":[["Only_Wr",1], ["Only_Rd",2]]
+            }
+        }
+    ]
+
+
+}

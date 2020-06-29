@@ -1,0 +1,17 @@
+{
+    "device": "xilinx_u280_xdma_201920_3",
+    "xclbin": "/home/source/multi_xbtest/xbtest_stress.xclbin",
+    "xbtest_pfm_def": "/home/source/multi_xbtest/xbtest_pfm_def_u280.json",
+    "testcases": [
+        {
+        "type": "memory_ddr",
+        "parameters": {
+            "test_sequence":[["Only_Wr",1], ["Only_Rd",2]],
+	    "lo_thresh_only_rd_bw": 17280,
+	    "hi_thresh_only_rd_bw": 30000
+            }
+        }
+    ]
+
+
+}
