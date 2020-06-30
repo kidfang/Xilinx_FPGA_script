@@ -1,22 +1,12 @@
 #!/bin/bash
-# value to identify the detected data
-#source /opt/xilinx/xrt/setup.sh
-#sleep 10
 
-Result_path=/root/xilinx_test/Reboot  # Path to save test log
+Result_path=/home/source/Xilinx_FPGA_script/DC&Reset_on_off/Reboot  # Path to save test log, please modify yourself
 Reboot_time=43200         # Time for your reboot or powercycle test (sec)
 scsi_num=2                # Type "lsscsi | wc -l" to chek your scsi drive number
-GPU_num=20                # Type "lspci | grep -i NVIDIA | wc -l" to chek your GPU detected amount
-#GPU_N=10                   # Real GPU card number system installed
+GPU_num=20                # Type "lspci | grep -i xilinx | wc -l" to chek your FPGA detected amount
 Test_type=1               # Input 0 for Powercycle, 1 for Reboot test
 
-#modprobe nvidia_modeset    # Delete hashtag to Enable for NVIDIA GPU
-#modprobe nvidia_drm        # Delete hashtag to Enable for NVIDIA GPU
-#modprobe nvidia            # Delete hashtag to Enable for NVIDIA GPU
-
-w=$( lspci | grep -i xilinx | wc -l )                    # AMD GPU card need change to vega
-#j=$( xbutil list | grep -i xilinx | wc -l )            # Delete hashtag to Enable for NVIDIA GPU
-#j=$( /opt/rocm/bin/rocm-smi -i | grep -i GPU | wc -l )  # Delete hashtag to Enable for AMD GPU
+w=$( lspci | grep -i xilinx | wc -l )                   
 
 # Besure as follows command result all 0, before start this test!!!
 # dmesg | grep -i corrected | wc -l
@@ -126,8 +116,11 @@ if [ $x -eq $scsi_num ];then
                         exit 0
                 fi
         else
-                echo $w > $Result_path/GPUcounterr_"$Test_name".txt
-                lspci | grep -i NVIDIA > $Result_path/GPU_list_"$Test_name".txt
+                echo $w > $Result_path/FPGAcounterr_"$Test_name".txt
+                lspci | grep -i xilinx > $Result_path/FPGA_list_"$Test_name".txt
+		dmesg | egrep -i "error|fail|fatal|warn|wrong|bug|fault^default" > $Result_path/dmesg_error_"$Test_name".txt
+                dmesg > $Result_path/dmesg_error_all_"$Test_name".txt
+                ipmitool sel elist > $Result_path/ipmi_eventlog_"$Test_name".txt
                 exit 0
         fi
 else
