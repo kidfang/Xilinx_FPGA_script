@@ -17,6 +17,7 @@
 5. Enable service to start the test
 
 # systemctl enable Power_cycle.service
+# systemctl start Power_cycle.service
 
 6. After test completed, disable service
 
