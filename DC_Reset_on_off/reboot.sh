@@ -5,9 +5,7 @@ Reboot_time=43200         # Time for your reboot or powercycle test (sec)
 scsi_num=2                # Type "lsscsi | wc -l" to chek your scsi drive number
 GPU_num=20                # Type "lspci | grep -i xilinx | wc -l" to chek your FPGA detected amount
 Test_type=1               # Input 0 for Powercycle, 1 for Reboot test
-
-w=$( lspci | grep -i xilinx | wc -l )                   
-
+                
 # Besure as follows command result all 0, before start this test!!!
 # dmesg | grep -i corrected | wc -l
 # ipmitool sel list | grep -i interrupt | wc -l
@@ -26,6 +24,7 @@ sleep 5
 
 mkdir -p $Result_path >/dev/null 2>&1
 
+w=$( lspci | grep -i xilinx | wc -l )   
 s=$( ipmitool sel list | grep -i interrupt )
 t=$( ipmitool sel list | wc -l )
 u=$( dmesg | grep -i corrected | wc -l )
