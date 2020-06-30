@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Result_path=/home/source/Xilinx_FPGA_script/DC&Reset_on_off/Reboot  # Path to save test log, please modify yourself
+Result_path=/home/source/Xilinx_FPGA_script/Reboot  # Path to save test log, please modify yourself
 Reboot_time=43200         # Time for your reboot or powercycle test (sec)
 scsi_num=2                # Type "lsscsi | wc -l" to chek your scsi drive number
 GPU_num=20                # Type "lspci | grep -i xilinx | wc -l" to chek your FPGA detected amount
