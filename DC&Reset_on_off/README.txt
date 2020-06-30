@@ -1,6 +1,6 @@
 1. Please copy Power_cycle.service to /lib/systemd/system/
  
- # cp Power_cycle.service /lib/systemd/system/
+# cp Power_cycle.service /lib/systemd/system/
 
 2. Copy reboot.sh to /usr/bin/
 
