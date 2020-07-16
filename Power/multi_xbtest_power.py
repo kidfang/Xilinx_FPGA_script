@@ -10,7 +10,7 @@ from collections import namedtuple
 xbtest_v4_cmdline = ['/opt/xilinx/xbtest/bin/xbtest', '-j', '/opt/xilinx/xbtest/xilinx_u50_gen3x16_xdma_201920_3.json']
 
 params = {}  # create empty dict
-params['xilinx_u280_xdma_201920_3'] = {'xbtest_ver':'v3.2.1', 'cmdline': ['/home/source/multi_xbtest/xbtest', '-j',  '/root/xili_FPGA_script/Power/power.json']} #, 'xbtest_dir':xbtest_v3_2_1_dir, 'xbtest_bin':xbtest_v3_2_1_dir+'/bin/xbtest', 'xbtest_json':xbtest_v3_2_1_dir+'xilinx_u200_xdma_201830_2.json',  }
+params['xilinx_u280_xdma_201920_3'] = {'xbtest_ver':'v3.2.1', 'cmdline': ['/home/source/multi_xbtest/xbtest', '-j',  '/home/source/Xilinx_FPGA_script/Power/power.json']} #, 'xbtest_dir':xbtest_v3_2_1_dir, 'xbtest_bin':xbtest_v3_2_1_dir+'/bin/xbtest', 'xbtest_json':xbtest_v3_2_1_dir+'xilinx_u200_xdma_201830_2.json',  }
 params['xilinx_u50_gen3x16_xdma_201920_3'] = {'xbtest_ver':'v4', 'cmdline': xbtest_v4_cmdline} #, 'xbtest_dir':xbtest_v4_dir, 'xbtest_bin':xbtest_v4_bin, 'xbtest_json':xbtest_v4_dir+'xilinx_u200_xdma_201830_2.json'}
 
 def mixrange(s):  # expand 1,2,3-5,6 into 1,2,3,4,5,6
