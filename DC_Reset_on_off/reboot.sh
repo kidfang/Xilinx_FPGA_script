@@ -40,7 +40,9 @@ if [ $z -eq 0 ];then
         touch $Result_path/rebootrec.txt
         echo 0 > $Result_path/count.txt
         date +%s > $Result_path/start_time.txt
-	sleep 10
+	sleep 5
+	/home/source/Xilinx_FPGA_script/speed_numa_check_all.sh 8 > $Result_path/speed_org.txt
+	sleep 5
 	init 6
 else
         echo "$y"
@@ -78,9 +80,12 @@ else
         Test_name=reboot
 fi
 
+/home/source/Xilinx_FPGA_script/speed_numa_check_all.sh 8 > $Result_path/speed_test.txt
+dd=$( diff "$Result_path"/speed_test.txt "$Result_path"/speed_org.txt)
+
 if [ $x -eq $scsi_num ];then
         if [ $w -eq $GPU_num ];then
-                if [ $v -eq 0 ] && [ $u -eq 0 ];then
+                if [ $v -eq 0 ] && [ $u -eq 0 ] && [ $dd -eq 0 ] ;then
 
                         date >> $Result_path/rebootrec.txt
                         echo PASS >> $Result_path/rebootrec.txt
@@ -112,6 +117,7 @@ if [ $x -eq $scsi_num ];then
                         dmesg | egrep -i "error|fail|fatal|warn|wrong|bug|fault^default" > $Result_path/dmesg_error_"$Test_name".txt
                         dmesg > $Result_path/dmesg_error_all_"$Test_name".txt
                         ipmitool sel elist > $Result_path/ipmi_eventlog_"$Test_name".txt
+			/home/source/Xilinx_FPGA_script/speed_numa_check_all.sh 8 > $Result_path/speed_test_fail.txt
                         exit 0
                 fi
         else
