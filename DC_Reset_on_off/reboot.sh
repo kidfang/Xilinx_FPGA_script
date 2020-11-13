@@ -81,7 +81,7 @@ else
 fi
 
 /home/source/Xilinx_FPGA_script/speed_numa_check_all.sh 8 > $Result_path/speed_test.txt
-dd=$( diff "$Result_path"/speed_test.txt "$Result_path"/speed_org.txt)
+dd=$( diff "$Result_path"/speed_test.txt "$Result_path"/speed_org.txt | wc -l )
 
 if [ $x -eq $scsi_num ];then
         if [ $w -eq $GPU_num ];then
