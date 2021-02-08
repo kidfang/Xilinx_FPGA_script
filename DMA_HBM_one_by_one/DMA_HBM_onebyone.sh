@@ -35,7 +35,7 @@ do
 		test_json="$tdm"_"$ty".json
 	elif [ $FPGA_u50 -gt 0 ]; then
 		FPGA_ini=u50
-		xb_name=xbtest_u50
+		xb_name=xbtest
 		test_json="$tdm"_"$ty"_u50.json
 	else
 		echo -e "Not U280 or U50! skip FPGA"$GPU" and check next one..."
