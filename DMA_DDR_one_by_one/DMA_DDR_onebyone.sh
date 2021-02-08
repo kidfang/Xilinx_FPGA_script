@@ -55,6 +55,6 @@ do
 
 done
 
-rm -f $Result_path/connectivity*
+rm -f $path/connectivity*
 
 echo -e "\n----------- End "${tdm^^}"_"$ty"_test -----------\n" | tee -a $Result_path/"${tdm^^}"_"$ty"_Summary.txt
