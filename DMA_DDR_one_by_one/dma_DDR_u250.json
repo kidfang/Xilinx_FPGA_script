@@ -1,0 +1,13 @@
+{
+    "device": "xilinx_u250_xdma_201830_2",
+    "xclbin": "/home/source/multi_xbtest/xbtest_u250-xdma_201830_2.xclbin",
+    "xbtest_pfm_def": "/home/source/multi_xbtest/xbtest_pfm_def_u250.json",
+    "testcases": [
+        {
+        "type": "dma",
+        "parameters": {
+            "test_sequence":[[10,"DDR","all",256]]
+            }
+        }
+    ]
+}
