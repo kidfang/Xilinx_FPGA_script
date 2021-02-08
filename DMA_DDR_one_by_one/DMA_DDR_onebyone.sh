@@ -38,7 +38,7 @@ do
 		xb_name=xbtest_u250
 		test_json="$tdm"_"$ty"_u250.json
 	else
-		echo -e "Not U280 or U250! end this script!"
+		echo -e "Not U280 or U250! skip FPGA"$GPU" and check next one..."
 		continue
 	fi
 
