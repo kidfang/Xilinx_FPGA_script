@@ -23,8 +23,8 @@ for (( GPU=0; GPU<$gpu_num; GPU=GPU+1 ));
 do
 
 	GPU_locate=$(($GPU+1))
-	FPGA_u280=$(xbutil list | grep -i xilinx | grep -i u280 | sed -n "$GPU_locate"p | wc -l)
-	FPGA_u250=$(xbutil list | grep -i xilinx | grep -i u250 | sed -n "$GPU_locate"p | wc -l) 
+	FPGA_u280=$(xbutil list | grep -i xilinx | sed -n "$GPU_locate"p | grep -i u280 | wc -l)
+	FPGA_u250=$(xbutil list | grep -i xilinx | sed -n "$GPU_locate"p | grep -i u250 | wc -l) 
 	Eth_pci_bus=$(xbutil list | grep xilinx | awk '{print $2}' | sed -n "$GPU_locate"p)
 	n=$(lspci -vv -s $Eth_pci_bus | grep -i numa | cut -f 3 -d " ")
 	c=$(lscpu | grep -i numa | grep -i node"$n" | cut -f 6 -d " ")
