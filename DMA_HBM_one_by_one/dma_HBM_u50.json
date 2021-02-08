@@ -1,0 +1,10 @@
+{
+    "testcases": [
+        {
+            "type": "dma",
+            "parameters": {
+                "test_sequence": [[10,"HBM","all"]]
+            }
+        }
+    ]
+}
