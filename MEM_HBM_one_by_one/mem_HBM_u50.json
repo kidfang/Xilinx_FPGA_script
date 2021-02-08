@@ -1,0 +1,10 @@
+{
+    "testcases": [
+        {
+            "type": "memory_hbm",
+            "parameters": {
+                "test_sequence": [[60,"Only_Wr"],[60,"Only_Rd"]]
+            }
+        }
+    ]
+}
