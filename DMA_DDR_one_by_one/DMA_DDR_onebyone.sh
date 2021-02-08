@@ -39,7 +39,7 @@ do
 		test_json="$tdm"_"$ty"_u250.json
 	else
 		echo -e "Not U280 or U250! end this script!"
-		exit 0
+		break
 	fi
 
 #	dmaj=$(cat dma_"$ty".json | grep -i test_sequence | awk '{print $1}')
