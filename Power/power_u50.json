@@ -1,0 +1,12 @@
+{
+    "testcases": [
+        {
+            "type": "power",
+            "parameters": {
+                "test_sequence_mode": "config_duration_toggle",
+                "test_sequence"     : [[180,20],[180,20]]
+            }
+        }
+    ]
+}
+

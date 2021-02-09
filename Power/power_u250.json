@@ -1,0 +1,14 @@
+{
+    "device": "xilinx_u250_xdma_201830_2",
+    "xclbin": "/home/source/multi_xbtest/xbtest_u250-xdma_201830_2.xclbin",
+    "xbtest_pfm_def": "/home/source/multi_xbtest/xbtest_pfm_def_u250.json",
+    "testcases": [
+        {
+        "type": "power",
+        "parameters": {
+            "test_sequence_mode": "config_duration_toggle",
+            "test_sequence":[[180,52], [180,52] ]
+            }
+        }
+    ]
+}
