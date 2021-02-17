@@ -3,7 +3,7 @@
 
 result_output=$('pwd')
 
-mkdir $result_output/Basic_info
+mkdir $result_output/Basic_info >/dev/null 2>&1
 
 lshw -c memory -short | tee  $result_output/Basic_info/mem_info.txt
 dmidecode -t memory | tee $result_output/Basic_info/mem.txt
