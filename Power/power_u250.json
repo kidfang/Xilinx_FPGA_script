@@ -7,7 +7,7 @@
         "type": "power",
         "parameters": {
             "test_sequence_mode": "config_duration_toggle",
-            "test_sequence":[[21600,85], [21600,85]]
+            "test_sequence":[[21600,80], [21600,80]]
             }
         },
         {
