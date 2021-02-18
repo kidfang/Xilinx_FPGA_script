@@ -10,7 +10,7 @@ dmidecode -t memory | tee $result_output/Basic_info/mem.txt
 dmidecode -t bios | tee $result_output/Basic_info/bios.txt
 lspci | grep -i Xilinx | tee $result_output/Basic_info/xilinx_fpga_pcie.txt
 lspci -tv | tee $result_output/Basic_info/lspci_tv.txt
-lspci -vd 10ee: | tee $result_output/Basic_info/lspci_10ee.txt
+lspci -vvvd 10ee: | tee $result_output/Basic_info/lspci_10ee.txt
 lspci | tee $result_output/Basic_info/lspci.txt
 lscpu | tee $result_output/Basic_info/lscpu.txt
 
