@@ -12,6 +12,7 @@ lspci | grep -i Xilinx | tee $result_output/Basic_info/xilinx_fpga_pcie.txt
 lspci -tv | tee $result_output/Basic_info/lspci_tv.txt
 lspci -vvvd 10ee: | tee $result_output/Basic_info/lspci_10ee.txt
 lspci | tee $result_output/Basic_info/lspci.txt
+lspci -vvv | tee $result_output/Basic_info/lspci_vvv.txt
 lscpu | tee $result_output/Basic_info/lscpu.txt
 
 $result_output/speed_numa_check_all.sh 8 |  tee $result_output/Basic_info/speed_numa.txt
