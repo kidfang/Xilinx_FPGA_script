@@ -2,7 +2,9 @@
 #!/bin/sh
 
 path=$('pwd')
-gpu_num=$(xbutil list | grep xilinx | wc -l)
+lspci_x=$(lspci | grep -i xilinx | wc -l)
+gpu_num=$[$lspci_x/2]
+#gpu_num=$(xbutil list | grep xilinx | wc -l)
 #FPGA_info_n=Progressing...
 #file_name=FPGA_power_
 file_name=dev
