@@ -7,13 +7,13 @@
         "type": "power",
         "parameters": {
             "test_sequence_mode": "config_duration_toggle",
-            "test_sequence":[[21600,80], [21600,80]]
+            "test_sequence":[[43200,80]]
             }
         },
         {
         "type": "memory_ddr",
         "parameters": {
-            "test_sequence":[["Alternate_Wr_Rd",21600,0,64,268435456,0,64,268435456], ["Alternate_Wr_Rd",21600,0,64,268435456,0,64,268435456]]
+            "test_sequence":[["Alternate_Wr_Rd",43200,0,64,268435456,0,64,268435456]]
             }
                 }
     ]
