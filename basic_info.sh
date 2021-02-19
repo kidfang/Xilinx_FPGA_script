@@ -18,4 +18,4 @@ lscpu | tee $result_output/Basic_info/lscpu.txt
 $result_output/speed_numa_check_all.sh 8 |  tee $result_output/Basic_info/speed_numa.txt
 $result_output/xilinx_FPGA_dump.sh
 
-#xbutil validate | tee $result_output/Basic_info/xbutil_validate.txt
+xbutil validate | tee $result_output/Basic_info/xbutil_validate.txt
