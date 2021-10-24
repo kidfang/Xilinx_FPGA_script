@@ -1,0 +1,13 @@
+{
+    "testcases": {
+        "memory": {
+            "DDR": {
+                "global_config": {
+                    "test_sequence": [
+                        [60, "only_rd"]
+                    ]
+                }
+            }
+        }
+    }
+}
