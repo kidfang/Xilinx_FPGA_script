@@ -1,0 +1,20 @@
+{
+    "testcases": {
+        "power": {
+            "global_config": {
+                "test_sequence": [
+                    [43200, 80]
+                ]
+            }
+        },
+        "memory": {
+            "DDR": {
+                "global_config": {
+                    "test_sequence": [
+                        [43200, "alternate_wr_rd"]
+                    ]
+                }
+            }
+        }
+    }
+}
