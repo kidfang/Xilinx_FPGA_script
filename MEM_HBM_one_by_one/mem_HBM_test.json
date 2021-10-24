@@ -1,0 +1,13 @@
+{
+    "testcases": {
+        "memory": {
+            "HBM": {
+                "global_config": {
+                    "test_sequence": [
+                        [60, "only_rd"]
+                    ]
+                }
+            }
+        }
+    }
+}
