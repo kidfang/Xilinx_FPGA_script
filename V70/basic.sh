@@ -1,6 +1,8 @@
 #!/bin/bash
 #!/bin/sh
 
+apt-get install numactl -y
+
 result_output=$('pwd')
 
 mkdir $result_output/Basic_info >/dev/null 2>&1
