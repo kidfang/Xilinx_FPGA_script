@@ -18,7 +18,7 @@ lspci -vvv | tee $result_output/Basic_info/lspci_vvv.txt
 lscpu | tee $result_output/Basic_info/lscpu.txt
 numactl -H | tee $result_output/Basic_info/numactl_H.txt
 
-/root/speed_numa_check_all.sh 8 |  tee $result_output/Basic_info/speed_numa.txt
+speed_numa_check_all.sh 8 |  tee $result_output/Basic_info/speed_numa.txt
 
 cat /var/log/dmesg > $result_output/Basic_info/dmesg_check_all.txt
 cat /var/log/dmesg | egrep -i "error|fail" > $result_output/Basic_info/dmesg_check.txt
