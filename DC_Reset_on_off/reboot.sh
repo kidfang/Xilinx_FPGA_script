@@ -41,7 +41,7 @@ if [ $z -eq 0 ];then
         echo 0 > $Result_path/count.txt
         date +%s > $Result_path/start_time.txt
 	sleep 5
-	/home/source/Xilinx_FPGA_script/speed_numa_check_all.sh 8 > $Result_path/speed_org.txt
+	speed_numa_check_all.sh 8 > $Result_path/speed_org.txt
 	sleep 5
 	init 6
 else
@@ -80,7 +80,7 @@ else
         Test_name=reboot
 fi
 
-/home/source/Xilinx_FPGA_script/speed_numa_check_all.sh 8 > $Result_path/speed_test.txt
+speed_numa_check_all.sh 8 > $Result_path/speed_test.txt
 dd=$( diff "$Result_path"/speed_test.txt "$Result_path"/speed_org.txt | wc -l )
 
 if [ $x -eq $scsi_num ];then
