@@ -1,0 +1,40 @@
+{
+  "comment": "First define all tests and all targeted cards",
+  "global_config": {
+    "cards": [
+      "0000:25:00.1",
+      "0000:26:00.1",
+      "0000:29:00.1",
+      "0000:2c:00.1",
+      "0000:45:00.1",
+      "0000:46:00.1",
+      "0000:49:00.1",
+      "0000:4c:00.1",
+      "0000:a5:00.1",
+      "0000:a6:00.1",
+      "0000:a9:00.1",
+      "0000:ac:00.1",
+      "0000:c5:00.1",
+      "0000:c6:00.1",
+      "0000:c9:00.1",
+      "0000:cc:00.1"
+    ],
+    "tests": [
+      {
+        "test_json": "/root/test_sh/stress_c.json"
+      }
+    ]
+  },
+  "card_config": {
+        "0000:49:00.1": {
+            "tests": [
+                {   "test_json" : "/root/test_sh/stress_60.json" }
+            ]
+        },
+        "0000:a6:00.1": {
+            "tests": [
+                {   "test_json" : "/root/test_sh/stress_64.json" }
+            ]
+        }
+    }
+}
